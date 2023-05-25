@@ -20,7 +20,7 @@ Antenas = 4;
 Po =@(Ns,Ant,x,mu) sum(sum(Gb^(x/2)*reshape(envalpha(x,mu,Ns*Ant),[Ns Ant]).^2,2)<Gth)/Ns;
 v = linspace(1,100,1e2);
 
-openfig('PoutFig1a.fig'); hold on
+openfig('PoutFig1a_raw.fig'); hold on
 
 loglog(v,ones(1,length(v))*Po(Ns,Antenas,0.5,1),'k:',...
        v,ones(1,length(v))*Po(Ns,Antenas,2,1),'k:',...
@@ -30,10 +30,10 @@ loglog(v,ones(1,length(v))*Po(Ns,Antenas,0.5,1),'k:',...
 ylim([0.9999e-5 1])
 
 
-legend('W=1',...
-       'W=1.5',...
-       'W=2',...
-       'FontSize', 12, 'location','southwest')
+legend('$W$ = 1',...
+       '$W$ = 1.5',...
+       '$W$ = 2',...
+       'FontSize', 12, 'location','southwest','interpreter','latex')
 
 ax = gca;
 ax.FontSize = 12;
@@ -43,8 +43,8 @@ set(legend, 'Interpreter', 'latex')
 xlabel('Number of Ports', 'FontSize', 12)
 ylabel('OP', 'FontSize', 12)
 
-dim1 = [0.35 0.06 0.2 0.2];
-str = {"$\mu = 1.0$","$\gamma_{th}/\hat{\gamma}$ = 2dB"};
+dim1 = [0.37 0.06 0.2 0.2];
+str = {"$\mu = 1.0$","$\gamma_{\rm th}/\bar{\gamma}$ = 2dB"};
 annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 14);
 
 x_arrow = [0.3 0.3];

@@ -3,7 +3,7 @@ function [Po] = Pout(gth,gb,alpha,mu,W,N)
 rho = linspace(1e-5,sqrt(gth/gb),1e4);
 k = 2:1:N;
 
-% Correlatiom Model, Jakes
+% Correlation Model, Jakes
 % delta = besselj(0,2*pi*W*(k-1)/(N-1)).^2;
 
 % New Correlation Model, Tabelado
