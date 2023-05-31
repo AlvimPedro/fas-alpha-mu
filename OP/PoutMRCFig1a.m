@@ -20,7 +20,7 @@ Antenas = 4;
 Po =@(Ns,Ant,x,mu) sum(sum(Gb^(x/2)*reshape(envalpha(x,mu,Ns*Ant),[Ns Ant]).^2,2)<Gth)/Ns;
 v = linspace(1,100,1e2);
 
-openfig('PoutFig1a_raw.fig'); hold on
+openfig('OP\data\PoutFig1a_raw.fig'); hold on
 
 loglog(v,ones(1,length(v))*Po(Ns,Antenas,0.5,1),'k:',...
        v,ones(1,length(v))*Po(Ns,Antenas,2,1),'k:',...
@@ -81,7 +81,7 @@ annotation('textbox',dim1,'LineStyle','none','interpreter','latex','String',str,
 
 grid on
 
-savefig('PoutMRCFig1a.fig')
+savefig('figs\PoutMRCFig1a.fig')
 hold off
 
 

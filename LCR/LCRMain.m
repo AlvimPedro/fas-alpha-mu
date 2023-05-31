@@ -57,4 +57,4 @@ xlabel('Number of Ports', 'FontSize', 12)
 ylabel('Normalized LCR $L(\rho_{\rm th})/f_{\rm D}$','interpreter','latex', 'FontSize', 12)
 
 grid on
-savefig('LCR.fig')
+savefig('figs\LCRFig3.fig')
