@@ -9,15 +9,15 @@ function [Po] = Pout(gth,gb,alpha,mu,W,N)
     % New Correlation Model, Tabelado
     switch W
     case 0.5
-        delta = 0.822599623583;
+        delta = 0.822599623583*2;
     case 1
-        delta = 0.556107207025;
+        delta = 0.556107207025*2;
     case 1.5
-        delta = 0.464519898111;
+        delta = 0.464519898111*2;
     case 2
-        delta = 0.396664784074;
+        delta = 0.396664784074*2;
     case 3
-        delta = 0.324684221336;
+        delta = 0.324684221336*2;
     otherwise
         delta = 0
     end
