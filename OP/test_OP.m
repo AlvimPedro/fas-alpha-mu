@@ -10,9 +10,9 @@ N_ports = [1 2 3 5 10 15 20 25 30 35 40 45 50 60 80 100];
 W = [1 1.5 2];
 
 %Fig1a
-gamma_th_bar = 10.^(-3/10);
+% gamma_th_bar = 10.^(-3/10);
 %Fig1b
-% gamma_th_bar = 10.^(2/10);
+gamma_th_bar = 10.^(2/10);
 
 
 Po = zeros(length(mu),length(N_ports),length(gamma_th_bar),length(W),length(alpha));
@@ -66,7 +66,7 @@ legend('W=1',...
        'W=2')
 
 
-savefig('OP\data\PoutFig1a_raw.fig')
+savefig('OP\data\PoutFig1b_raw.fig')
 % savefig('OP\data\PoutFig1b_raw.fig')
 % savefig('Pout.fig')
 
