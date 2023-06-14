@@ -31,8 +31,8 @@ loglog(v,ones(1,length(v))*Po(Ns,Antenas,0.5,1),'k:',...
 ylim([0.9999e-5 1])
 
 
-legend('$W$ = 1',...
-       '$W$ = 1.5',...
+legend('$W$ = 0.5',...
+       '$W$ = 1',...
        '$W$ = 2',...
        'FontSize', 12, 'location','northeast')
 
@@ -87,7 +87,7 @@ annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on'
 
 grid on
 
-savefig('figs\PoutMRCFig1a.fig')
+savefig('figs\PoutJakesMRCFig1a.fig')
 hold off
 
 
