@@ -23,29 +23,29 @@ otherwise
 end
 
 
-mq =@(k) marcumq(sqrt(2*mu*delta*rho.^alpha(1)/(1-delta)),...
-                 sqrt(2*mu*(gth/gb)^(alpha(k)/2)/(1-delta)),mu);
-f = ones(1,length(rho));
-for k = 1:N
-    f = f .*(ones(1,length(rho))-mq(k));
-end
-
-f = f .* rho.^(alpha(1)*mu-1).*exp(-mu*rho.^alpha(1));
-
-Po = alpha(1)*mu^mu*trapz(rho,f)/gamma(mu);
-
-
-% //////////////////////////////////////////////////////
-% mq =@(k) marcumq(sqrt(2*delta*rho/(1-delta)),...
+% mq =@(k) marcumq(sqrt(2*mu*delta*rho.^alpha(1)/(1-delta)),...
 %                  sqrt(2*mu*(gth/gb)^(alpha(k)/2)/(1-delta)),mu);
 % f = ones(1,length(rho));
 % for k = 1:N
 %     f = f .*(ones(1,length(rho))-mq(k));
 % end
 
-% f = f .* rho.^(mu-1).*exp(-rho);
+% f = f .* rho.^(alpha(1)*mu-1).*exp(-mu*rho.^alpha(1));
 
-% Po = trapz(rho,f)/gamma(mu);
+% Po = alpha(1)*mu^mu*trapz(rho,f)/gamma(mu);
+
+
+% //////////////////////////////////////////////////////
+mq =@(k) marcumq(sqrt(2*delta*rho/(1-delta)),...
+                 sqrt(2*mu*(gth/gb)^(alpha(k)/2)/(1-delta)),mu);
+f = ones(1,length(rho));
+for k = 1:N
+    f = f .*(ones(1,length(rho))-mq(k));
+end
+
+f = f .* rho.^(mu-1).*exp(-rho);
+
+Po = trapz(rho,f)/gamma(mu);
 
 % //////////////////////////////////////////////////////////
 
