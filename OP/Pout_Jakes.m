@@ -1,6 +1,8 @@
 function [Po] = Pout_Jakes(gth,gb,alpha,mu,W,N)
 
-rho = linspace(1e-5,sqrt(gth/gb),1e4);
+omega = gamma(mu+2/alpha(1)) / (mu^(2/alpha(1))*gamma(mu))    
+
+rho = linspace(1e-5,sqrt(omega*gth/gb),1e4);
 k = 2:1:N;
 
 % Correlation Model, Jakes
@@ -24,7 +26,7 @@ delta = besselj(0,2*pi*W*(k-1)/(N-1)).^2;
 
 
 mq =@(k) marcumq(sqrt(2*mu*delta(k-1)*rho.^alpha(1)/(1-delta(k-1))),...
-                 sqrt(2*mu*(gth/gb)^(alpha(k)/2)/(1-delta(k-1))),mu);
+                 sqrt(2*mu*(omega*gth/gb)^(alpha(k)/2)/(1-delta(k-1))),mu);
 f = ones(1,length(rho));
 for k = 2:N
     f = f .*(ones(1,length(rho))-mq(k));

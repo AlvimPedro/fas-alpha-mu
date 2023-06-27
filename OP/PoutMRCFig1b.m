@@ -33,7 +33,13 @@ ylim([0.9999e-5 1])
 legend('$W$ = 0.5',...
        '$W$ = 1',...
        '$W$ = 2',...
-       'FontSize', 12, 'location','southwest','interpreter','latex','Position',[0.21 0.14 0.2 0.2])
+       'FontSize', 12, 'location','southwest','interpreter','latex')
+
+% %Legend with (b)  
+% legend('$W$ = 0.5',...
+%        '$W$ = 1',...
+%        '$W$ = 2',...
+%        'FontSize', 12, 'location','southwest','interpreter','latex','Position',[0.21 0.14 0.2 0.2])
 
 ax = gca;
 ax.FontSize = 12;
@@ -44,9 +50,14 @@ xlabel('Number of Ports', 'FontSize', 12)
 ylabel('OP', 'FontSize', 12)
 
 %Label
-dim1 = [0.42 0.05 0.2 0.2];
+dim1 = [0.36 0.05 0.2 0.2];
 str = {"$\mu = 1.0$","$\gamma_{\rm th}/\bar{\gamma}$ = 2 dB"};
 annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12);
+
+% %Label with (b)
+% dim1 = [0.42 0.05 0.2 0.2];
+% str = {"$\mu = 1.0$","$\gamma_{\rm th}/\bar{\gamma}$ = 2 dB"};
+% annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12);
 
 %TextArrow MRC
 x_arrow = [0.3 0.3];
@@ -79,10 +90,10 @@ dim1 = [.45 .45 0.1 0.1];
 str = {"$\alpha$ = 0.5"};
 annotation('textbox',dim1,'LineStyle','none','interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12);
 
-%Label
-dim1 = [0.13 0.08 0.1 0.1];
-str = {"$\textbf{(b)}$"};
-annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
+% %Label
+% dim1 = [0.13 0.08 0.1 0.1];
+% str = {"$\textbf{(b)}$"};
+% annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
 
 
 grid on

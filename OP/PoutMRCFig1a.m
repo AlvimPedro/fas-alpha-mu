@@ -81,9 +81,9 @@ str = {"$\alpha$ = 0.5"};
 annotation('textbox',dim1,'LineStyle','none','interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12);
 
 %Label
-dim1 = [0.13 0.08 0.1 0.1];
-str = {"$\textbf{(a)}$"};
-annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
+% dim1 = [0.13 0.08 0.1 0.1];
+% str = {"$\textbf{(a)}$"};
+% annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
 
 grid on
 

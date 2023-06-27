@@ -45,11 +45,11 @@ legend('$\alpha$ = 0.5',...
        '$\alpha$ = 10',...
        'FontSize', 12, 'location','southeast')
 
-%Label
-dim1 = [0.13 0.08 0.1 0.1];
-str = {"$\textbf{(c)}$"};
-annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
+% %Label
+% dim1 = [0.13 0.08 0.1 0.1];
+% str = {"$\textbf{(c)}$"};
+% annotation('textbox',dim1,'interpreter','latex','String',str,'FitBoxToText','on', 'FontSize', 12, 'fontweight', 'bold','LineStyle', 'none');
 
 
-savefig('figs\CapJakesFig2.fig')
+savefig('figs\CapJakesFig1c.fig')
 hold off
