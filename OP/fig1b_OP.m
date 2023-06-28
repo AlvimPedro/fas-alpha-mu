@@ -12,7 +12,7 @@ W = [0.5 1 2];
 %Fig1a
 % gamma_th_bar = 10.^(-3/10);
 %Fig1b
-gamma_th_bar = 10.^(2/10);
+gamma_th_bar = 10.^(0.75/10);
 % gamma_th_bar = 1;
 
 

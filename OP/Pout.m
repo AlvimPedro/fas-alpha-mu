@@ -1,5 +1,7 @@
 function [Po] = Pout(gth,gb,alpha,mu,W,N)
 
+omega = gamma(mu+2/alpha(1)) / (mu^(2/alpha(1))*gamma(mu)); 
+
 rho = linspace(1e-5,500,1e4);
 % k = 2:1:N;
 
@@ -37,7 +39,7 @@ end
 
 % //////////////////////////////////////////////////////
 mq =@(k) marcumq(sqrt(2*delta*rho/(1-delta)),...
-                 sqrt(2*mu*(gth/gb)^(alpha(k)/2)/(1-delta)),mu);
+                 sqrt(2*mu*(omega*gth/gb)^(alpha(k)/2)/(1-delta)),mu);
 f = ones(1,length(rho));
 for k = 1:N
     f = f .*(ones(1,length(rho))-mq(k));

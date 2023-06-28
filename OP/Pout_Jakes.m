@@ -1,6 +1,6 @@
 function [Po] = Pout_Jakes(gth,gb,alpha,mu,W,N)
 
-omega = gamma(mu+2/alpha(1)) / (mu^(2/alpha(1))*gamma(mu))    
+omega = gamma(mu+2/alpha(1)) / (mu^(2/alpha(1))*gamma(mu)); 
 
 rho = linspace(1e-5,sqrt(omega*gth/gb),1e4);
 k = 2:1:N;
