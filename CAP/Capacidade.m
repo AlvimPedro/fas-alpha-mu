@@ -2,7 +2,7 @@ clear all
 clc
 
 % alpha = [0.5 2 5 10];
-alpha = [5];
+alpha = [1];
 % alpha = [0.5];
 mu = 1;
 N_ports = [1 2 3 5 10 20 50 100];
