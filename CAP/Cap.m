@@ -4,6 +4,7 @@ mx = 50;
 while abs(Pout_Jakes(mx,gb,alpha,mu,W,N)/(1+mx)) > 1e-2
     mx = mx+5;
 end
+% mx=100;
 mx
 gth = linspace(1e-5,mx,2*mx);
 P = zeros(1,length(gth));
