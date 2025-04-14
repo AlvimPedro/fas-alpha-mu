@@ -1,6 +1,6 @@
-# Simulations for the paper "On the Performance of Fluid Antenna Systems Under α-μ Fading Channels"
+# Simulations for the IEEE paper "On the Performance of Fluid Antenna Systems Under α-μ Fading Channels"
 
-This repository contains the simulation codes used in the article *On the Performance of Fluid Antenna Systems Under α-μ Fading Channels*. The codes were implemented in **MATLAB** and reproduce the results presented in the article.
+This repository contains the simulation codes used in the article *On the Performance of Fluid Antenna Systems Under α-μ Fading Channels*. The codes were implemented in **MATLAB** and reproduce the results presented in the article. https://ieeexplore.ieee.org/document/10272689
 
 ## Repository Structure
 -  **CAP/:** Folder containing the Ergodic Capacity codes.
